@@ -1,46 +1,143 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Expedition Report</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <main class="report-shell">
-      <header class="report-header">
-        <p class="eyebrow">CS-110 // Expedition Report</p>
-        <h1>Replace this with your mission title.</h1>
-        <p>Replace this sentence with the destination, genre, and purpose of your report.</p>
-      </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <section class="scene is-active" data-scene="0">
-        <p class="scene-number">Scene 01 // Arrival</p>
-        <h2>What did your character expect to find?</h2>
-        <div class="image-placeholder" role="img" aria-label="Add an original or properly credited arrival image here.">Add arrival image</div>
-        <p>Replace this paragraph with the opening of your expedition account.</p>
-      </section>
+    <title>My Website</title>
 
-      <section class="scene" data-scene="1" hidden>
-        <p class="scene-number">Scene 02 // Discovery</p>
-        <h2>What changed the mission?</h2>
-        <div class="image-placeholder" role="img" aria-label="Add an original or properly credited discovery image here.">Add discovery image</div>
-        <p>Replace this paragraph with the evidence, creature, failure, or absurd complication your character discovered.</p>
-      </section>
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
 
-      <section class="scene" data-scene="2" hidden>
-        <p class="scene-number">Scene 03 // Outcome</p>
-        <h2>What should Kairova do next?</h2>
-        <div class="image-placeholder" role="img" aria-label="Add an original or properly credited outcome image here.">Add outcome image</div>
-        <p>Replace this paragraph with the result and the recommendation for your report's audience.</p>
-      </section>
+<body>
 
-      <nav class="scene-controls" aria-label="Story scenes">
-        <button id="previous-scene" type="button">Previous</button>
-        <span id="scene-status" aria-live="polite">Scene 1 of 3</span>
-        <button id="next-scene" type="button">Next</button>
-      </nav>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">My Website</div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button id="menuButton">☰</button>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <main>
+
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Welcome to My Website</h1>
+<img src="images/Wimage.png" alt="Description of the image">
+
+                <p>
+                    This is a simple website template that you can
+                    customize however you want.
+                </p>
+
+                <button id="learnButton" class="button">
+                    Learn More
+                </button>
+            </div>
+        </section>
+
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h2>About Us</h2>
+
+            <p>
+                We are the keepers of Kairova — maintaining the dome’s 
+                systems and ensuring smooth signal flow across all nodes. 
+                Our mission: keep the dome online and the world connected.
+            </p>
+        </section>
+
+
+        <!-- Services Section -->
+        <section id="services" class="section">
+            <h2>Our Services</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Galatic Signal Calibration</h3>
+                    <p>
+                    
+                We tune the dome’s 
+                frequencies for clear cosmic communication.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Dome maintenance</h3>
+                    <p>
+                      Keeping Kairova’s systems stable and online.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Energy Flow Optimization</h3>
+                    <p>
+                     Ensuring smooth power distribution across all nodes.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact">
+            <h2>Contact Us</h2>
+
+            <form id="contactForm">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Your Email"
+                    required
+                >
+
+                <textarea
+                    id="message"
+                    placeholder="Your Message"
+                    required
+                ></textarea>
+
+                <button type="submit" class="button">
+                    Send Message
+                </button>
+
+            </form>
+        </section>
+
     </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 My Website. All rights reserved.</p>
+    </footer>
+
+
+    <!-- Connect JavaScript -->
     <script src="script.js"></script>
-  </body>
+
+</body>
 </html>

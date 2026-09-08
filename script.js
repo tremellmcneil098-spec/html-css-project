@@ -1,23 +1,44 @@
-const scenes = Array.from(document.querySelectorAll(".scene"));
-const previousButton = document.querySelector("#previous-scene");
-const nextButton = document.querySelector("#next-scene");
-const status = document.querySelector("#scene-status");
-let currentScene = 0;
+// -------------------------
+// Mobile Menu
+// -------------------------
 
-function showScene(index) {
-  currentScene = Math.max(0, Math.min(index, scenes.length - 1));
+const menuButton = document.getElementById("menuButton");
+const navLinks = document.querySelector(".nav-links");
 
-  scenes.forEach((scene, sceneIndex) => {
-    const isCurrent = sceneIndex === currentScene;
-    scene.hidden = !isCurrent;
-    scene.classList.toggle("is-active", isCurrent);
-  });
+menuButton.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+});
 
-  previousButton.disabled = currentScene === 0;
-  nextButton.disabled = currentScene === scenes.length - 1;
-  status.textContent = `Scene ${currentScene + 1} of ${scenes.length}`;
-}
 
-previousButton.addEventListener("click", () => showScene(currentScene - 1));
-nextButton.addEventListener("click", () => showScene(currentScene + 1));
-showScene(0);
+// -------------------------
+// Learn More Button
+// -------------------------
+
+const learnButton = document.getElementById("learnButton");
+
+learnButton.addEventListener("click", function () {
+
+    document.getElementById("about").scrollIntoView({
+        behavior: "smooth"
+    });
+
+});
+
+
+// -------------------------
+// Contact Form
+// -------------------------
+
+const contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+
+    alert("Thanks for contacting us, " + name + "!");
+
+    contactForm.reset();
+
+});
